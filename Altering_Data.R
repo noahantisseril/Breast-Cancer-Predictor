@@ -57,4 +57,6 @@ for(i in 1:284){
     data[i,10]=1
   }
 }
+#Disproportionate number of cases showing right-breast quadrants affected by cancer, so it was deleted
+data<-data[,-8]
 write.table(data, file="Data.csv", sep=",", row.names=FALSE)
