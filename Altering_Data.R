@@ -15,14 +15,12 @@ for(i in 1:length(json_data$resources$datahub$type)){
     print(data)
   }
 }
-
 #Removing empty data points
 for(i in 1:286){
   if(data[i,5]!='yes' && data[i,5]!='no'){
     data<-data[-i,]
   }
 }
-
 #Changing Strings to numbers
 for(i in 1:284){
   if(data[i,2]=="premeno"){
@@ -34,45 +32,60 @@ for(i in 1:284){
   if(data[i,2]=="lt40"){
     data[i,2]=2
   }
+}
+for(i in 1:284){
   if(data[i,5]=="yes"){
     data[i,5]=0
   }
   if(data[i,5]=="no"){
     data[i,5]=1
   }
+}
+for(i in 1:284){
   if(data[i,7]=="right"){
     data[i,7]=0
   }
   if(data[i,7]=="left"){
     data[i,7]=1
   }
+}
+for(i in 1:284){
   if(data[i,9]=="yes"){
     data[i,9]=0
   }
   if(data[i,9]=="no"){
     data[i,9]=1
   }
+}
+for(i in 1:284){
   if(data[i,10]=="recurrence-events"){
     data[i,10]=0
   }
   if(data[i,10]=="no-recurrence-events"){
     data[i,10]=1
   }
-  if(data[i,1]=="30-39"){
+}
+for(i in 1:284){
+  if(data[i,1]=="20-29"){
     data[i,1]=0
   }
-  if(data[i,1]=="40-49"){
+  if(data[i,1]=="30-39"){
     data[i,1]=1
   }
-  if(data[i,1]=="50-59"){
+  if(data[i,1]=="40-49"){
     data[i,1]=2
   }
-  if(data[i,1]=="60-69"){
+  if(data[i,1]=="50-59"){
     data[i,1]=3
   }
-  if(data[i,1]=="70-79"){
+  if(data[i,1]=="60-69"){
     data[i,1]=4
   }
+  if(data[i,1]=="70-79"){
+    data[i,1]=5
+  }
+}
+for(i in 1:284){
   if(data[i,3]=="0-4"){
     data[i,3]=0
   }
@@ -106,6 +119,8 @@ for(i in 1:284){
   if(data[i,3]=="50-54"){
     data[i,3]=10
   }
+}
+for(i in 1:284){
   if(data[i,4]=="0-2"){
     data[i,4]=1
   }
@@ -124,9 +139,10 @@ for(i in 1:284){
   if(data[i,4]=="15-17"){
     data[i,4]=6
   }
+  if(data[i,4]=="24-26"){
+    data[i,4]=7
+  }
 }
-
 #Disproportionate number of cases showing right-breast quadrants affected by cancer, so it was deleted
 data<-data[,-8]
-
 write.table(data, file="Data.csv", sep=",", row.names=FALSE)
