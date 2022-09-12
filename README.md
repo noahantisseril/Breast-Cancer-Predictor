@@ -2,7 +2,7 @@
 
 We created a Random Forest model to predict whether someone would have a recurrence of breast cancer based on parameters including age, node count, and if radiation was used. To optimize the class of the model and the model itself, we varied the n-estimators, tree depth, maximum features, random state, and model type. After 100 trials with each model, the following accuracy values were discovered:
 
-        LinearSVC : 80.95% 
+**LinearSVC :** 80.95% 
 
         DecisionTreeClassifier: 76.88%
 
