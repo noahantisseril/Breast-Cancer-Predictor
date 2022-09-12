@@ -27,7 +27,7 @@ check = True;
 while(check) :
     x = []
     x.append(int(input("Enter your age. (0 = 20-29, 1 = 30-39, 2 = 40-49, 3 = 59-59, 4 = 60-69, 5 = 70-79)\n")))
-    x.append(int(input("Enter your menopause stage. (0 = premenopause, 1 = ge40, 2 = lt40)\n")))
+    x.append(int(input("Enter your stage of menopause. (0 = premenopause, 1 = ge40, 2 = lt40)\n")))
     x.append(int(input("Enter your tumor size. (0 = 0-4, 1 = 5-9, 2 = 10-14, 3 = 15-19, 4 = 20-24, 5 = 25-29, 6 = 30-34, 7 = 35-39, 8 = 40-44, 9 = 45-49, 10 = 50-54)\n")))
     x.append(int(input("Enter the number of axillary lymph nodes. (0 = 0-2, 1 = 3-5, 2 = 6-8, 3 = 9-11, 4 = 12-14, 5 = 15-17, 6 = 18-20, 7 = 21-23, 8 = 24-26)\n")))
     x.append(int(input("Enter if you have node caps or not. (0 = Yes, 1 = No)\n")))
